@@ -52,6 +52,9 @@
     <Compile Include="Stack\StackImplementationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stack\MaxStackImplementationTests.cs" />
+    <Compile Include="Strings\ReverseStringTests.cs" />
+    <Compile Include="Strings\PalindromeTests.cs" />
+    <Compile Include="Strings\AtoiTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

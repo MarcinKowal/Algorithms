@@ -3,3 +3,7 @@
 ################################################################################
 
 *.tmp
+*.txt
+/Algorithms/Algorithms.UnitTests/bin/Debug
+/Algorithms/Algorithms.UnitTests/obj/Debug
+/Algorithms/packages
