@@ -48,13 +48,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Stack\MinStackImplementationTests.cs" />
-    <Compile Include="Stack\StackImplementationTests.cs" />
+    <Compile Include="DataStructures\MinStackImplementationTests.cs" />
+    <Compile Include="DataStructures\StackImplementationTests.cs" />
+    <Compile Include="DataStructures\LinkedListImplementationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stack\MaxStackImplementationTests.cs" />
+    <Compile Include="DataStructures\MaxStackImplementationTests.cs" />
     <Compile Include="Strings\ReverseStringTests.cs" />
     <Compile Include="Strings\PalindromeTests.cs" />
     <Compile Include="Strings\AtoiTests.cs" />
+    <Compile Include="Strings\AnagramsTests.cs" />
+    <Compile Include="Strings\FindFirstRepeatingCharacterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
