@@ -7,3 +7,6 @@
 /Algorithms/Algorithms.UnitTests/bin/Debug
 /Algorithms/Algorithms.UnitTests/obj/Debug
 /Algorithms/packages
+/Algorithms/Algorithms/obj/Debug
+/Algorithms/Algorithms/obj/Debug
+*.cs

@@ -51,6 +51,7 @@
     <Compile Include="DataStructures\MinStackImplementationTests.cs" />
     <Compile Include="DataStructures\StackImplementationTests.cs" />
     <Compile Include="DataStructures\LinkedListImplementationTests.cs" />
+    <Compile Include="DataStructures\DoublyLinkedListImplementationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataStructures\MaxStackImplementationTests.cs" />
     <Compile Include="Strings\ReverseStringTests.cs" />

@@ -37,8 +37,8 @@ namespace Algorithms.UnitTests.DataStructures
             cut.AddAtStart(2);
             cut.AddAtStart(5);
 
-            Assert.AreEqual(5, cut.GetElementByIndex(0));
-            Assert.AreEqual(2, cut.GetElementByIndex(1));
+            Assert.AreEqual(secondElement, cut.GetElementByIndex(0));
+            Assert.AreEqual(firstElement, cut.GetElementByIndex(1));
         }
 
         [TestMethod]
@@ -58,9 +58,6 @@ namespace Algorithms.UnitTests.DataStructures
         [TestMethod]
         public void ShouldReturnSizeOfNonEmptyList()
         {
-            var firstElement = 2;
-            var secondElement = 5;
-
             cut.AddAtStart(2);
             cut.AddAtStart(5);
 
