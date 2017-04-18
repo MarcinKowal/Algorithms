@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\FindNNodeFromEndOfLinkedList.cs" />
     <Compile Include="DataStructures\CircularLinkedListImplementation.cs" />
     <Compile Include="DataStructures\DoublyLinkedListImplementation.cs" />
     <Compile Include="DataStructures\SinglyLinkedListImplementation.cs" />

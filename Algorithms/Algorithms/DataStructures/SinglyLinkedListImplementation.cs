@@ -10,6 +10,15 @@ namespace Algorithms.DataStructures
     {
         public T Data { get; set; }
         public SinglyLinkedNode<T> Next { get; set;}
+
+        public SinglyLinkedNode()
+            : this(default(T))
+        { }
+
+        public SinglyLinkedNode(T value)
+        {
+            Data = value;
+        }
     }
     public class SinglyLinkedListImplementation<T>
     {

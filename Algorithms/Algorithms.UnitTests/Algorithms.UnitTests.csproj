@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\FindNodeFromEndOfLinkedListTests.cs" />
     <Compile Include="DataStructures\MinStackImplementationTests.cs" />
     <Compile Include="DataStructures\StackImplementationTests.cs" />
     <Compile Include="DataStructures\SinglyLinkedListImplementationTests.cs" />
