@@ -15,13 +15,13 @@ namespace Algorithms
     public class MinStackImplementation<T> : IMinStackImplementation<T>
         where T : IComparable<T>
     {
-        private StackImplementation<T> mainStack;
-        private StackImplementation<T> trackingStack;
+        private ListBasedStackImplementation<T> mainStack;
+        private ListBasedStackImplementation<T> trackingStack;
 
         public MinStackImplementation(int stackSize)
         {
-            this.mainStack = new StackImplementation<T>(stackSize);
-            this.trackingStack = new StackImplementation<T>(stackSize);
+            this.mainStack = new ListBasedStackImplementation<T>(stackSize);
+            this.trackingStack = new ListBasedStackImplementation<T>(stackSize);
         }
 
         public int CurrentSize

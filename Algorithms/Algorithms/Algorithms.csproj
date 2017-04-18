@@ -43,10 +43,11 @@
     <Compile Include="Algorithms\FindNNodeFromEndOfLinkedList.cs" />
     <Compile Include="DataStructures\CircularLinkedListImplementation.cs" />
     <Compile Include="DataStructures\DoublyLinkedListImplementation.cs" />
+    <Compile Include="DataStructures\LinkedListBasedStackImplementation.cs" />
     <Compile Include="DataStructures\SinglyLinkedListImplementation.cs" />
     <Compile Include="DataStructures\MaxStackImplementation.cs" />
     <Compile Include="DataStructures\MinStackImplementation.cs" />
-    <Compile Include="DataStructures\StackImplementation.cs" />
+    <Compile Include="DataStructures\ListBasedStackImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\Atoi.cs" />
     <Compile Include="Strings\Anagrams.cs" />

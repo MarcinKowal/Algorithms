@@ -13,21 +13,21 @@ namespace Algorithms.UnitTests
         [ExpectedException(typeof(ArgumentException))]
         public void ShouldThrowExceptionWhenSizeOfStackIsNegative()
         {
-            new StackImplementation<int>(-1);
+            new ListBasedStackImplementation<int>(-1);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void ShouldThrowExceptionWhenSizeOfStackIsZero()
         {
-            new StackImplementation<int>(0);
+            new ListBasedStackImplementation<int>(0);
         }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
         public void ShouldThrowExceptionWhenPopOnEmptyStack()
         {
-            var cut = new StackImplementation<int>(1);
+            var cut = new ListBasedStackImplementation<int>(1);
             var item = cut.Pop();
         }
 
@@ -35,7 +35,7 @@ namespace Algorithms.UnitTests
         [ExpectedException(typeof(InvalidOperationException))]
         public void ShouldThrowExceptionWhenPeekOnEmptyStack()
         {
-            var cut = new StackImplementation<int>(1);
+            var cut = new ListBasedStackImplementation<int>(1);
             var item = cut.Peek();
         }
 
@@ -43,7 +43,7 @@ namespace Algorithms.UnitTests
         [ExpectedException(typeof(StackOverflowException))]
         public void ShouldThrowExceptionWhenPushOnExceededSize()
         {
-            var cut = new StackImplementation<int>(1);
+            var cut = new ListBasedStackImplementation<int>(1);
 
             cut.Push(3);
             cut.Push(12);
@@ -56,7 +56,7 @@ namespace Algorithms.UnitTests
             var expectedList = new List<int>(items);
             expectedList.Reverse();
 
-            var cut = new StackImplementation<int>(items.Capacity);
+            var cut = new ListBasedStackImplementation<int>(items.Capacity);
 
 
             items.ForEach(item => cut.Push(item));
@@ -67,7 +67,7 @@ namespace Algorithms.UnitTests
         [TestMethod]
         public void ShouldReturnZeroWhenStackIsEmpty()
         {
-            var cut = new StackImplementation<int>(10);
+            var cut = new ListBasedStackImplementation<int>(10);
 
             Assert.AreEqual(0, cut.CurrentSize);
         }
@@ -75,7 +75,7 @@ namespace Algorithms.UnitTests
         [TestMethod]
         public void ShouldReturnDifferentSizeWhenPush()
         {
-            var cut = new StackImplementation<int>(10);
+            var cut = new ListBasedStackImplementation<int>(10);
             var items = new List<int> { 18, 5, -6, 36, 48 };
 
             for (int i = 0; i < items.Count; i++)
@@ -89,7 +89,7 @@ namespace Algorithms.UnitTests
         [TestMethod]
         public void ShouldReturnDifferentSizeWhenPop()
         {
-            var cut = new StackImplementation<int>(10);
+            var cut = new ListBasedStackImplementation<int>(10);
             var items = new List<int> { 18, 5, -6, 36, 48 };
 
             items.ForEach(item => cut.Push(item));
@@ -107,7 +107,7 @@ namespace Algorithms.UnitTests
         [TestMethod]
         public void ShouldReturnSameSizeWhenPeek()
         {
-            var cut = new StackImplementation<int>(10);
+            var cut = new ListBasedStackImplementation<int>(10);
             var items = new List<int> { 18, 5, -6, 36, 48 };
 
             items.ForEach(item => cut.Push(item));

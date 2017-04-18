@@ -12,13 +12,13 @@ namespace Algorithms
         T Peek();
     }
 
-    public class StackImplementation<T> : IStackImplementation<T>
+    public class ListBasedStackImplementation<T> : IStackImplementation<T>
     {
         private int size;
         private int stackPointer = -1;
         private List<T> stack;
 
-        public StackImplementation(int stackSize)
+        public ListBasedStackImplementation(int stackSize)
         {
             if (stackSize <= 0)
             {

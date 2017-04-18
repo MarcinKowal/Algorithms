@@ -11,13 +11,13 @@ namespace Algorithms
     public class MaxStackImplementation<T> : IMaxStackImplementation<T>
         where T: IComparable<T>
     {
-        private StackImplementation<T> trackingStack;
-        private StackImplementation<T> mainStack;
+        private ListBasedStackImplementation<T> trackingStack;
+        private ListBasedStackImplementation<T> mainStack;
 
         public MaxStackImplementation(int stackSize)
         { 
-            this.trackingStack = new StackImplementation<T>(stackSize);
-            this.mainStack = new StackImplementation<T>(stackSize);
+            this.trackingStack = new ListBasedStackImplementation<T>(stackSize);
+            this.mainStack = new ListBasedStackImplementation<T>(stackSize);
         }
 
 
