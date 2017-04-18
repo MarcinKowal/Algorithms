@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\CircularLinkedListImplementation.cs" />
     <Compile Include="DataStructures\DoublyLinkedListImplementation.cs" />
-    <Compile Include="DataStructures\LinkedListImplementation.cs" />
+    <Compile Include="DataStructures\SinglyLinkedListImplementation.cs" />
     <Compile Include="DataStructures\MaxStackImplementation.cs" />
     <Compile Include="DataStructures\MinStackImplementation.cs" />
     <Compile Include="DataStructures\StackImplementation.cs" />

@@ -7,9 +7,9 @@ using System.Collections.Generic;
 namespace Algorithms.UnitTests.DataStructures
 {
     [TestClass]
-    public class LinkedListImplementationTests
+    public class SinglyLinkedListImplementationTests
     {
-        private LinkedListImplementation<int> cut = new LinkedListImplementation<int>();
+        private SinglyLinkedListImplementation<int> cut = new SinglyLinkedListImplementation<int>();
 
         [TestMethod]
         public void ShouldAddNodeAtBeginToEmptyList()

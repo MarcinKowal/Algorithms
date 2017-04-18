@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algorithms.DataStructures;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Algorithms.UnitTests.DataStructures
 {
@@ -155,6 +156,12 @@ namespace Algorithms.UnitTests.DataStructures
             var element = 100;
             
             cut.InsertAt(insertionIndex, element);
+        }
+
+        [TestMethod]
+        public void ShouldReturnEmptyListWhenGetAllFromEmptyList()
+        {
+            CollectionAssert.AreEquivalent(new List<int>(), cut.GetAll().ToList());
         }
     }
 }

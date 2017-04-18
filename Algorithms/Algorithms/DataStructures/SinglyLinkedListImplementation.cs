@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Algorithms.DataStructures
 {
-    public class Node<T>
+    public class SinglyLinkedNode<T>
     {
         public T Data { get; set; }
-        public Node<T> Next { get; set;}
+        public SinglyLinkedNode<T> Next { get; set;}
     }
-    public class LinkedListImplementation<T>
+    public class SinglyLinkedListImplementation<T>
     {
-        private Node<T> head = null;
+        private SinglyLinkedNode<T> head = null;
         private long size = 0;
 
         public void AddAtStart(T value)
         {
-            head = new Node<T> { Data = value, Next = head }; 
+            head = new SinglyLinkedNode<T> { Data = value, Next = head }; 
             size++;
         }
 
         public void AddAtEnd(T value)
         {
-            var node = new Node<T> { Data = value, Next = null };
+            var node = new SinglyLinkedNode<T> { Data = value, Next = null };
 
             if (head == null)
             {
@@ -119,7 +119,7 @@ namespace Algorithms.DataStructures
             }
 
             var temp = currentNode.Next;
-            currentNode.Next = new Node<T> { Data = value, Next = temp };
+            currentNode.Next = new SinglyLinkedNode<T> { Data = value, Next = temp };
             size++;
         }
 
@@ -130,13 +130,12 @@ namespace Algorithms.DataStructures
             if (head != null)
             {
                 var currentNode = head;
-                while (currentNode.Next != null)
+                do
                 {
                     allItems.Add(currentNode.Data);
                     currentNode = currentNode.Next;
                 }
-
-                allItems.Add(currentNode.Data);
+                while (currentNode != null);
             }
             return allItems;
         }
