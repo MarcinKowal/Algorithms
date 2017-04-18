@@ -18,15 +18,24 @@ namespace Algorithms.DataStructures
     {
         private long size = 0; 
         private DoublyLinkedNode<T> head;
+        private DoublyLinkedNode<T> tail;
 
         public long Size { get { return this.size; } }
 
         public void AddAtStart(T item)
         {
             var newNode = new DoublyLinkedNode<T> { Data = item, Prev = null, Next = head };
-            if (head != null)
+
+            if (size == 0)
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
                 head.Prev = newNode;
-            head = newNode;
+                head = newNode;
+            }
             size++;
         }
 
@@ -50,21 +59,19 @@ namespace Algorithms.DataStructures
 
         public void AddAtEnd(T item)
         {
-            var currentNode = head;
+            var newNode = new DoublyLinkedNode<T> { Data = item, Next = null, Prev = tail };
 
-            if (currentNode != null)
+            if (size == 0)
             {
-                while (currentNode.Next != null)
-                {
-                    currentNode = currentNode.Next;
-                }
-                var newNode = new DoublyLinkedNode<T> { Data = item, Next = null, Prev = currentNode };
-                currentNode.Next = newNode;
+                head = newNode;
+                tail = newNode;
             }
             else
             {
-                head = new DoublyLinkedNode<T> { Data = item, Next = null, Prev = null };
+                tail.Next = newNode;
+                tail = newNode;
             }
+           
             size++;
         }
 
@@ -82,28 +89,19 @@ namespace Algorithms.DataStructures
 
         public T TakeAtEnd()
         {
-            T value;
-            var currentNode = head;
-            if (currentNode == null)
+            if (size > 0)
             {
-                return default(T);
-            }
-
-            if (currentNode.Next != null)
-            {
-                while (currentNode.Next.Next != null)
+                var value = tail.Data;
+                tail = tail.Prev;
+                if (tail != null)
                 {
-                    currentNode = currentNode.Next;
+                    tail.Next = null;
                 }
 
-               value = currentNode.Next.Data;
-                currentNode.Next = null;
                 size--;
                 return value;
             }
-            value = currentNode.Data;
-            size--;
-            return value;
+            return default(T);
 
         }
 
@@ -142,6 +140,21 @@ namespace Algorithms.DataStructures
             currentNode.Next = newNode;
             afterNode.Prev = newNode;
             size++;
+        }
+
+        public void Reverse()
+        {
+            var current = head;
+            DoublyLinkedNode<T> temp = null;
+            while (current != null)
+            {
+                temp = current.Prev;
+                current.Prev = current.Next;
+                current.Next = temp;
+                current = current.Prev;
+            }
+            tail = head;
+            head = temp.Prev;
         }
     }
 }

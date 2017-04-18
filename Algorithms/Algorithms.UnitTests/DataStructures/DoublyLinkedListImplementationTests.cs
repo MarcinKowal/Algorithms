@@ -163,5 +163,34 @@ namespace Algorithms.UnitTests.DataStructures
         {
             CollectionAssert.AreEquivalent(new List<int>(), cut.GetAll().ToList());
         }
+
+        [TestMethod]
+        public void ShouldReturnReversedList()
+        {
+            cut.AddAtEnd(5);
+            cut.AddAtStart(4);
+            cut.AddAtEnd(6);
+            cut.AddAtStart(10);
+
+            cut.Reverse();
+
+            CollectionAssert.AreEquivalent(new[] { 6, 5, 4, 10 }, cut.GetAll().ToList());
+        }
+
+        [TestMethod]
+        public void ShouldReturnItemTakenFromEndOfListAfterReverse()
+        {
+            cut.AddAtEnd(5);
+            cut.AddAtStart(4);
+            cut.AddAtEnd(6);
+            cut.AddAtStart(10);
+
+            cut.Reverse();
+
+            Assert.AreEqual(10, cut.TakeAtEnd());
+            Assert.AreEqual(4, cut.TakeAtEnd());
+            Assert.AreEqual(5, cut.TakeAtEnd());
+            Assert.AreEqual(6, cut.TakeAtEnd());
+        }
     }
 }
