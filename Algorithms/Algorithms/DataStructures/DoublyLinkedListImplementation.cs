@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Algorithms.DataStructures
 {
     public class DoublyLinkedNode<T>
+        where T:IComparable<T>
     {
         public T Data { get; set; }
         public DoublyLinkedNode<T> Prev { get; set; }
@@ -15,6 +16,7 @@ namespace Algorithms.DataStructures
     }
 
     public class DoublyLinkedListImplementation<T>
+         where T : IComparable<T>
     {
         private long size = 0; 
         private DoublyLinkedNode<T> head;
@@ -155,6 +157,24 @@ namespace Algorithms.DataStructures
             }
             tail = head;
             head = temp.Prev;
+        }
+
+        public int FindItem(T item)
+        {
+            var index = 0;
+
+            var currentNode = head;
+            while(currentNode != null)
+            {
+                if (item.CompareTo(currentNode.Data) == 0)
+                {
+                    return index;
+                }
+                currentNode = currentNode.Next;
+                index++;
+            }
+
+            return -1;
         }
     }
 }

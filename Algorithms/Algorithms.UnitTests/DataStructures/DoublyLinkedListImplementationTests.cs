@@ -192,5 +192,23 @@ namespace Algorithms.UnitTests.DataStructures
             Assert.AreEqual(5, cut.TakeAtEnd());
             Assert.AreEqual(6, cut.TakeAtEnd());
         }
+
+        [TestMethod]
+        public void ShouldReturnIndexOfExistingItem()
+        {
+            cut.AddAtEnd(5);
+            cut.AddAtStart(4);
+
+            Assert.AreEqual(0, cut.FindItem(4));
+        }
+
+        [TestMethod]
+        public void ShouldReturnNegativeIndexOfNonExistingItem()
+        {
+            cut.AddAtEnd(5);
+            cut.AddAtStart(4);
+
+            Assert.AreEqual(-1, cut.FindItem(50));
+        }
     }
 }
