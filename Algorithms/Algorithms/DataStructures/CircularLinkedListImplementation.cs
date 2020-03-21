@@ -78,19 +78,14 @@ namespace Algorithms.DataStructures
 
         public IEnumerable<T> GetAll()
         {
-            var list = new List<T>();
             var currentNode = head;
 
             do
             {
-                list.Add(currentNode.Data);
+                yield return currentNode.Data;
                 currentNode = currentNode.Next;
             }
             while (currentNode != head);
-
-            return list;
         }
-
-
     }
 }

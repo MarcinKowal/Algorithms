@@ -43,6 +43,7 @@
     <Compile Include="Algorithms\FindNNodeFromEndOfLinkedList.cs" />
     <Compile Include="Algorithms\MergeTwoSinglyLinkedLists.cs" />
     <Compile Include="Algorithms\RemoveDuplicatesFromLinkedList.cs" />
+    <Compile Include="DataStructures\CircularBufferImplementation.cs" />
     <Compile Include="DataStructures\CircularLinkedListImplementation.cs" />
     <Compile Include="DataStructures\DoublyLinkedListImplementation.cs" />
     <Compile Include="DataStructures\LinkedListBasedStackImplementation.cs" />

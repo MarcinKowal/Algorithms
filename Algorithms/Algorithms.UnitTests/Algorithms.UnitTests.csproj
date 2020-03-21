@@ -51,6 +51,7 @@
     <Compile Include="Algorithms\FindNodeFromEndOfLinkedListTests.cs" />
     <Compile Include="Algorithms\MergeTwoSinglyLinkedListsTests.cs" />
     <Compile Include="Algorithms\RemoveDuplicatesFromLinkedListTests.cs" />
+    <Compile Include="DataStructures\CircularBufferImplementationTests.cs" />
     <Compile Include="DataStructures\MinStackImplementationTests.cs" />
     <Compile Include="DataStructures\StackImplementationTests.cs" />
     <Compile Include="DataStructures\SinglyLinkedListImplementationTests.cs" />
